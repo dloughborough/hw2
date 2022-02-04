@@ -69,6 +69,7 @@
 # Delete existing data, so you'll start fresh each time this script is run.
 # Use `Model.destroy_all` code.
 Movie.destroy_all
+Person.destroy_all
 
 # Generate models and tables, according to the domain model
 values = {title: "Batman Begins",
@@ -99,8 +100,61 @@ values = {name: "Chistopher Nolan"}
 
 christopher_nolan = Person.new(values)
 christopher_nolan.save
-puts christopher_nolan.inspect
 
+values = {name: "Christian Bale"}
+
+christian_bale = Person.new(values)
+christian_bale.save
+
+values = {name: "Michael Caine"}
+
+michael_caine = Person.new(values)
+michael_caine.save
+
+values = {name: "Liam Neeson"}
+
+liam_neeson = Person.new(values)
+liam_neeson.save
+
+values = {name: "Katie Holmes"}
+
+katie_holmes = Person.new(values)
+katie_holmes.save
+
+values = {name: "Gary Oldman"}
+
+gary_oldman = Person.new(values)
+gary_oldman.save
+
+values = {name: "Heath Ledger"}
+
+heath_ledger = Person.new(values)
+heath_ledger.save
+
+values = {name: "Aaron Eckhart"}
+
+aaron_eckhart = Person.new(values)
+aaron_eckhart.save
+
+values = {name: "Maggie Gyllenhaal"}
+
+maggie_gyllenhaal = Person.new(values)
+maggie_gyllenhaal.save
+
+values = {name: "Tom Hardy"}
+
+tom_hardy = Person.new(values)
+tom_hardy.save
+
+values = {name: "Joseph Gordon-Levitt"}
+
+joseph_gordon_levitt = Person.new(values)
+joseph_gordon_levitt.save
+
+values = {name: "Anne Hathaway"}
+
+anne_hathaway = Person.new(values)
+anne_hathaway.save
 
 # Insert data into your database that reflects the sample data shown above
 # Do not use hard-coded foreign key IDs.
