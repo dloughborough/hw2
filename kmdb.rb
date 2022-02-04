@@ -92,9 +92,14 @@ values = {title: "The Dark Knight Rises",
           rated: "PG-13",
           director_id: 1}
 
-dark_knight = Movie.new(values)
-dark_knight.save
+dark_knight_rises = Movie.new(values)
+dark_knight_rises.save
 
+values = {name: "Chistopher Nolan"}
+
+christopher_nolan = Person.new(values)
+christopher_nolan.save
+puts christopher_nolan.inspect
 
 
 # Insert data into your database that reflects the sample data shown above
