@@ -68,10 +68,34 @@
 
 # Delete existing data, so you'll start fresh each time this script is run.
 # Use `Model.destroy_all` code.
-# TODO!
+Movie.destroy_all
+People.destroy_all
+Role.destroy_all
 
 # Generate models and tables, according to the domain model
-# TODO!
+values = {title: "Batman Begins",
+            year_released: "2005",
+            rated: "PG-13"
+            director: "Chirstopher Nolan"
+}
+batman_begins = Movie.new(values)
+batman_begins.save
+
+values = {title: "The Dark Knight",
+            year_released: "2008",
+            rated: "PG-13"
+            director: "Christopher Nolan"
+}
+dark_knight = Movie.new(values)
+dark_knight.save
+
+values = {title: "The Dark Knight Rises",
+            year_released: "2012",
+            rated: "PG-13"
+            director: "Christopher Nolan"
+}
+dark_knight_rises = Movie.new(values)
+dark_knight_rises.save
 
 # Insert data into your database that reflects the sample data shown above
 # Do not use hard-coded foreign key IDs.
