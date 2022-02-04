@@ -70,31 +70,9 @@
 # Use `Model.destroy_all` code.
 Movie.destroy_all
 Person.destroy_all
+Role.destroy_all
 
 # Generate models and tables, according to the domain model
-values = {title: "Batman Begins",
-          year_released: "2005",
-          rated: "PG-13",
-          director_id: 1}
-
-batman_begins = Movie.new(values)
-batman_begins.save
-
-values = {title: "The Dark Knight",
-          year_released: "2008",
-          rated: "PG-13",
-          director_id: 1}
-
-dark_knight = Movie.new(values)
-dark_knight.save
-
-values = {title: "The Dark Knight Rises",
-          year_released: "2012",
-          rated: "PG-13",
-          director_id: 1}
-
-dark_knight_rises = Movie.new(values)
-dark_knight_rises.save
 
 values = {name: "Chistopher Nolan"}
 
@@ -155,6 +133,136 @@ values = {name: "Anne Hathaway"}
 
 anne_hathaway = Person.new(values)
 anne_hathaway.save
+
+
+values = {title: "Batman Begins",
+          year_released: "2005",
+          rated: "PG-13",
+          director_id: christopher_nolan.id}
+
+batman_begins = Movie.new(values)
+batman_begins.save
+
+values = {title: "The Dark Knight",
+          year_released: "2008",
+          rated: "PG-13",
+          director_id: christopher_nolan.id}
+
+dark_knight = Movie.new(values)
+dark_knight.save
+
+values = {title: "The Dark Knight Rises",
+          year_released: "2012",
+          rated: "PG-13",
+          director_id: christopher_nolan.id}
+
+dark_knight_rises = Movie.new(values)
+dark_knight_rises.save
+
+values = {movie_id: batman_begins.id,
+          actor_id: christian_bale.id,
+          character_name: "Bruce Wayne"}
+
+bruce_wayne1 = Role.new(values)
+bruce_wayne1.save
+
+values = {movie_id: batman_begins.id,
+          actor_id: michael_caine.id,
+          character_name: "Alfred"}
+
+alfred1 = Role.new(values)
+alfred1.save
+
+values = {movie_id: batman_begins.id,
+          actor_id: liam_neeson.id,
+          character_name: "Ra's Al Ghul"}
+
+ras_al_ghul1 = Role.new(values)
+ras_al_ghul1.save
+
+values = {movie_id: batman_begins.id,
+          actor_id: katie_holmes.id,
+          character_name: "Rachel Dawes"}
+
+rachel_dawes1 = Role.new(values)
+rachel_dawes1.save
+
+values = {movie_id: batman_begins.id,
+          actor_id: gary_oldman.id,
+          character_name: "Commissioner Gordon"}
+
+commissioner_gordon1 = Role.new(values)
+commissioner_gordon1.save
+
+values = {movie_id: dark_knight.id,
+          actor_id: christian_bale.id,
+          character_name: "Bruce Wayne"}
+
+bruce_wayne2 = Role.new(values)
+bruce_wayne2.save
+
+values = {movie_id: dark_knight.id,
+          actor_id: heath_ledger.id,
+          character_name: "Joker"}
+
+joker1 = Role.new(values)
+joker1.save
+
+values = {movie_id: dark_knight.id,
+          actor_id: aaron_eckhart.id,
+          character_name: "Harvey Dent"}
+
+harvey_dent1 = Role.new(values)
+harvey_dent1.save
+
+values = {movie_id: dark_knight.id,
+          actor_id: michael_caine.id,
+          character_name: "Alfred"}
+
+alfred2 = Role.new(values)
+alfred2.save
+
+values = {movie_id: dark_knight.id,
+          actor_id: maggie_gyllenhaal.id,
+          character_name: "Rachel Dawes"}
+
+rachel_dawes2 = Role.new(values)
+rachel_dawes2.save
+
+values = {movie_id: dark_knight_rises.id,
+          actor_id: christian_bale.id,
+          character_name: "Bruce Wayne"}
+
+bruce_wayne3 = Role.new(values)
+bruce_wayne3.save
+
+values = {movie_id: dark_knight_rises.id,
+          actor_id: gary_oldman.id,
+          character_name: "Commissioner Gordon"}
+
+commissioner_gordon2 = Role.new(values)
+commissioner_gordon2.save
+
+values = {movie_id: dark_knight_rises.id,
+          actor_id: tom_hardy.id,
+          character_name: "Bane"}
+
+bane1 = Role.new(values)
+bane1.save
+
+values = {movie_id: dark_knight_rises.id,
+          actor_id: joseph_gordon_levitt.id,
+          character_name: "John Blake"}
+
+john_blake1 = Role.new(values)
+john_blake1.save
+
+values = {movie_id: dark_knight_rises.id,
+          actor_id: anne_hathaway.id,
+          character_name: "Selina Kyle"}
+
+selina_kyle1 = Role.new(values)
+selina_kyle1.save
 
 # Insert data into your database that reflects the sample data shown above
 # Do not use hard-coded foreign key IDs.
